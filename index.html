@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hadiah Misterius</title>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff99;
+      font-family: monospace;
+      text-align: center;
+      margin: 0;
+      padding: 2rem;
+    }
+    .btn {
+      background-color: #00ff99;
+      color: black;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 2rem;
+    }
+    #selfieCam {
+      display: none;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 15px #00ff99;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎁 Hadiah Rahasia</h1>
+  <p>Tap tombol di bawah... tapi jangan kaget ya 🤭</p>
+  <button class="btn" onclick="bukaKamera()">Buka Hadiah Misterius</button>
+  <video id="selfieCam" autoplay playsinline muted></video>
+  <script>
+    function bukaKamera() {
+      const vid = document.getElementById("selfieCam");
+      navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" } })
+        .then(stream => {
+          vid.srcObject = stream;
+          vid.style.display = "block";
+        })
+        .catch(() => alert("⚠️ Kamera tidak bisa diakses! Pastikan izinnya aktif ya."));
+    }
+  </script>
+</body>
+</html>
