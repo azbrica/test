@@ -30,11 +30,16 @@
       cursor: pointer;
       margin-top: 2rem;
     }
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+    }
     #selfieCam {
       display: none;
       width: 90%;
       max-width: 400px;
-      margin-top: 2rem;
       border-radius: 15px;
       box-shadow: 0 0 15px #00ff99;
       transform: scaleX(-1); /* Flip horizontal for mirror */
@@ -50,7 +55,9 @@
 
   <div id="page2" class="page">
     <h2>🎉 Tadaaa... liat siapa yang ulang tahun hari ini!</h2>
-    <video id="selfieCam" autoplay playsinline muted></video>
+    <div class="video-wrapper">
+      <video id="selfieCam" autoplay playsinline muted></video>
+    </div>
   </div>
 
   <script>
