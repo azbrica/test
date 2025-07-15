@@ -1,77 +1,36 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <title>Animated Landscape</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <style>
-    body, html {{
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-    }}
-    .sky {{
-      background: linear-gradient(to top, #a3d9ff, #87cefa);
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      z-index: 0;
-    }}
-    .mountains {{
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 30%;
-      background: linear-gradient(to top, #556b2f, #6b8e23);
-      clip-path: polygon(0% 100%, 15% 60%, 30% 100%, 50% 50%, 70% 100%, 85% 65%, 100% 100%);
-    }}
-    .grass {{
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      height: 10%;
-      background: #228B22;
-      z-index: 2;
-    }}
-    .cloud {{
-      position: absolute;
-      background: #fff;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: float 60s linear infinite;
-    }}
-    .cloud::before, .cloud::after {{
-      content: '';
-      position: absolute;
-      background: #fff;
-      border-radius: 50%;
-    }}
-    .cloud::before {{
-      width: 50px;
-      height: 50px;
-      top: -25px;
-      left: 10px;
-    }}
-    .cloud::after {{
-      width: 40px;
-      height: 40px;
-      top: -15px;
-      left: 30px;
-    }}
-    @keyframes float {{
-      0% {{ left: -100px; top: 50px; }}
-      100% {{ left: 110%; top: 50px; }}
-    }}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="images/gift.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/index.css">
+
+  <!-- Document Title -->
+  <title>FLOWERS FOR SOMEONE</title>
 </head>
+
 <body>
-  <div class="sky"></div>
-  <div class="cloud" style="top: 80px; animation-delay: 0s;"></div>
-  <div class="cloud" style="top: 120px; animation-delay: 15s;"></div>
-  <div class="cloud" style="top: 160px; animation-delay: 30s;"></div>
-  <div class="mountains"></div>
-  <div class="grass"></div>
+  <!-- Background -->
+  <div class="night"></div>
+
+  <!-- Title -->
+  <h1 class="title"></h1>
+
+  <!-- Button -->
+  <div style="position: absolute; top: 60vh; width: 100%; display: flex; justify-content: center;">
+    <a href="flower.html" class="btn">
+      <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+        <path
+          d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z">
+        </path>
+      </svg>
+
+      <span class="text">Open</span>
+    </a>
+  </div>
+
+  <script src="js/index.js"></script>
 </body>
+
 </html>
